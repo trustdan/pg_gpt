@@ -19,11 +19,11 @@ The extension sends a subset of the database schema to ChatGPT and asks it to ge
 
 ## Installation
 
-Requires [pgx](https://github.com/tcdi/pgx). Install this first:
+Requires [pgrx](https://github.com/tcdi/pgrx). Install this first:
 
 ```bash
-cargo install --locked cargo-pgx
-cargo pgx init
+cargo install --locked cargo-pgrx
+cargo pgrx init
 ```
 
 Now you can install the extension:
@@ -32,7 +32,7 @@ Now you can install the extension:
 git clone https://github.com/cloudquery/pg_gpt
 cd pg_gpt
 export OPENAI_KEY=<YOUR_KEY>
-cargo pgx run
+cargo pgrx run
 # will drop into psql shell
 ```
 
@@ -54,7 +54,7 @@ select gpt('show me all open aws s3 buckets');
 First run:
 
 ```bash
-cargo pgx install
+cargo pgrx install
 ```
 
 This places the extension in the postgres extensions directory. Then, in your postgres instance, run:
